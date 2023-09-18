@@ -39,7 +39,7 @@ runs:
       run: |
         git checkout -b ${{ steps.temp_branch.outputs.value }}
         git add --all
-        git commit -m "${{ inputs.commit_message }}"
+        git commit -m "${{ inputs.commit_message }}" --allow-empty
         git push -u origin ${{ steps.temp_branch.outputs.value }}
     - name: Push changes to the branch that triggered the workflow (even if its protected)
       shell: bash
