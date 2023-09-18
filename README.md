@@ -1,12 +1,13 @@
 # Commit and Push to Protected Branch
 A Github Action that is able to push the pending changes of a codebase on a branch protected by pull request.
+Fork to allow empty commits
 
 ## Usage
 Add the following step to your workflow
 
 ```yaml
 - name: Commit and Push to Protected Branch
-  uses: fabriziocacicia/commit-and-push-to-protected-branch-action@v0.1.0
+  uses: bonitour/commit-and-push-to-protected-branch-action@v0.1.0
   with:
     commit_message: "commit message"
 ```
